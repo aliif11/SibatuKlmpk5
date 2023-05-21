@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\kuliah\\semester 4\\pemrograman visual\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {}
+    "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {}
   },
   "projects": {
-    "D:\\kuliah\\semester 4\\pemrograman visual\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {
+    "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\kuliah\\semester 4\\pemrograman visual\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
+        "projectUniqueName": "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
         "projectName": "SibatuKlmpk5",
-        "projectPath": "D:\\kuliah\\semester 4\\pemrograman visual\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
-        "packagesPath": "C:\\Users\\Bagas\\.nuget\\packages\\",
-        "outputPath": "D:\\kuliah\\semester 4\\pemrograman visual\\SibatuKlmpk5\\SibatuKlmpk5\\obj\\",
+        "projectPath": "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
+        "packagesPath": "C:\\Users\\ASPIRE E1-470\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bagas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ASPIRE E1-470\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

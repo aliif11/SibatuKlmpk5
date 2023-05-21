@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Bagas\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Bagas\\.nuget\\packages"
+      "C:\\Users\\ASPIRE E1-470\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ASPIRE E1-470\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
