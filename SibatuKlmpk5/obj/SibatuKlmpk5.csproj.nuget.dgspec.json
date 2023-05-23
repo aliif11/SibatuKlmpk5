@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {}
+    "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {
+    "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
+        "projectUniqueName": "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
         "projectName": "SibatuKlmpk5",
-        "projectPath": "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
-        "packagesPath": "C:\\Users\\ASPIRE E1-470\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASPIRE E1-470\\Downloads\\PROJECT KELOMPOK P VISUAL\\BECK END\\SibatuKlmpk5\\SibatuKlmpk5\\obj\\",
+        "projectPath": "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
+        "packagesPath": "C:\\Users\\Bagas\\.nuget\\packages\\",
+        "outputPath": "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ASPIRE E1-470\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bagas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,6 +9,11 @@
       "SibatuKlmpk5/1.0.0": {
         "runtime": {
           "SibatuKlmpk5.dll": {}
+        },
+        "resources": {
+          "aa-DJ/SibatuKlmpk5.resources.dll": {
+            "locale": "aa-DJ"
+          }
         }
       }
     }

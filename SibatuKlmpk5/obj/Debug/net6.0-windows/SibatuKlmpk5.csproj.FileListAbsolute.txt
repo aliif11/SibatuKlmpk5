@@ -34,3 +34,29 @@ C:\Users\ASPIRE E1-470\Downloads\PROJECT KELOMPOK P VISUAL\BECK END\SibatuKlmpk5
 C:\Users\ASPIRE E1-470\Downloads\PROJECT KELOMPOK P VISUAL\BECK END\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.SplashScreen.resources
 C:\Users\ASPIRE E1-470\Downloads\PROJECT KELOMPOK P VISUAL\BECK END\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Properties.Resources.resources
 C:\Users\ASPIRE E1-470\Downloads\PROJECT KELOMPOK P VISUAL\BECK END\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.FormPeminjaman.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\bin\Debug\net6.0-windows\SibatuKlmpk5.exe
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\bin\Debug\net6.0-windows\SibatuKlmpk5.deps.json
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\bin\Debug\net6.0-windows\SibatuKlmpk5.runtimeconfig.json
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\bin\Debug\net6.0-windows\SibatuKlmpk5.dll
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\bin\Debug\net6.0-windows\SibatuKlmpk5.pdb
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\bin\Debug\net6.0-windows\aa-DJ\SibatuKlmpk5.resources.dll
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.csproj.AssemblyReference.cache
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Dashboard.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.FormPeminjaman.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Login.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.MenuBarang.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.MenuPinjaman.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Properties.Resources.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Dashboard.aa-DJ.resources
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.csproj.GenerateResource.cache
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.GeneratedMSBuildEditorConfig.editorconfig
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.AssemblyInfoInputs.cache
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.AssemblyInfo.cs
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.csproj.CoreCompileInputs.cache
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\aa-DJ\SibatuKlmpk5.resources.dll
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.dll
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\refint\SibatuKlmpk5.dll
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.pdb
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.genruntimeconfig.cache
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\ref\SibatuKlmpk5.dll
+D:\clone\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.SplashScreen.resources

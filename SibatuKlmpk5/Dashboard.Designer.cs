@@ -29,113 +29,112 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
-            button1 = new Button();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            SuspendLayout();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            resources.ApplyResources(label1, "label1");
-            label1.BackColor = Color.Transparent;
-            label1.ForeColor = Color.LimeGreen;
-            label1.Name = "label1";
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label1.Name = "label1";
             // 
             // label2
             // 
-            resources.ApplyResources(label2, "label2");
-            label2.BackColor = Color.Transparent;
-            label2.BorderStyle = BorderStyle.FixedSingle;
-            label2.Name = "label2";
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Name = "label2";
             // 
             // label3
             // 
-            resources.ApplyResources(label3, "label3");
-            label3.BackColor = Color.Transparent;
-            label3.BorderStyle = BorderStyle.FixedSingle;
-            label3.Name = "label3";
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Name = "label3";
             // 
             // label4
             // 
-            resources.ApplyResources(label4, "label4");
-            label4.BackColor = Color.Transparent;
-            label4.BorderStyle = BorderStyle.FixedSingle;
-            label4.Name = "label4";
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Name = "label4";
             // 
             // label5
             // 
-            resources.ApplyResources(label5, "label5");
-            label5.BackColor = Color.Transparent;
-            label5.ForeColor = SystemColors.GrayText;
-            label5.Name = "label5";
+            resources.ApplyResources(this.label5, "label5");
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label5.Name = "label5";
             // 
             // label6
             // 
-            resources.ApplyResources(label6, "label6");
-            label6.BackColor = Color.Transparent;
-            label6.ForeColor = Color.Red;
-            label6.Name = "label6";
-            label6.Click += label6_Click;
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Name = "label6";
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(64, 0, 0);
-            resources.ApplyResources(button1, "button1");
-            button1.ForeColor = Color.Snow;
-            button1.Name = "button1";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.ForeColor = System.Drawing.Color.Snow;
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
-            resources.ApplyResources(label7, "label7");
-            label7.BackColor = SystemColors.WindowFrame;
-            label7.BorderStyle = BorderStyle.FixedSingle;
-            label7.ForeColor = Color.YellowGreen;
-            label7.Name = "label7";
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.ForeColor = System.Drawing.Color.YellowGreen;
+            this.label7.Name = "label7";
             // 
             // label8
             // 
-            resources.ApplyResources(label8, "label8");
-            label8.BackColor = Color.Transparent;
-            label8.ForeColor = Color.YellowGreen;
-            label8.Name = "label8";
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.YellowGreen;
+            this.label8.Name = "label8";
             // 
             // label9
             // 
-            resources.ApplyResources(label9, "label9");
-            label9.BackColor = Color.Transparent;
-            label9.ForeColor = Color.YellowGreen;
-            label9.Name = "label9";
+            resources.ApplyResources(this.label9, "label9");
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.Color.YellowGreen;
+            this.label9.Name = "label9";
             // 
             // Dashboard
             // 
             resources.ApplyResources(this, "$this");
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.WindowFrame;
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(button1);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            DoubleBuffered = true;
-            Name = "Dashboard";
-            SizeGripStyle = SizeGripStyle.Show;
-            TransparencyKey = Color.Transparent;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.Name = "Dashboard";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
