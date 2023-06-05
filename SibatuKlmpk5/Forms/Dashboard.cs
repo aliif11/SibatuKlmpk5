@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SibatuKlmpk5
+namespace SibatuKlmpk5.Forms
 {
-    public partial class MenuPinjaman : Form
+    public partial class Dashboard : Form
     {
-        public MenuPinjaman()
+        public Dashboard()
         {
             InitializeComponent();
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

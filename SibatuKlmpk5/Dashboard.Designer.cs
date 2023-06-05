@@ -29,125 +29,209 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnPinjaman = new System.Windows.Forms.Button();
+            this.btnBarang = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.panelBottom = new System.Windows.Forms.Panel();
+            this.panelContainer = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panelMenu.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // panelMenu
             // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Name = "label1";
+            this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.panelMenu.Controls.Add(this.btnLogout);
+            this.panelMenu.Controls.Add(this.btnPinjaman);
+            this.panelMenu.Controls.Add(this.btnBarang);
+            this.panelMenu.Controls.Add(this.btnDashboard);
+            this.panelMenu.Controls.Add(this.panelLogo);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(260, 518);
+            this.panelMenu.TabIndex = 0;
             // 
-            // label2
+            // btnLogout
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.Name = "label2";
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.btnLogout.Image = global::SibatuKlmpk5.Properties.Resources.logout;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(0, 336);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Padding = new System.Windows.Forms.Padding(23, 0, 0, 0);
+            this.btnLogout.Size = new System.Drawing.Size(260, 70);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "  Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogout.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // btnPinjaman
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label3.Name = "label3";
+            this.btnPinjaman.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPinjaman.FlatAppearance.BorderSize = 0;
+            this.btnPinjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPinjaman.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPinjaman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.btnPinjaman.Image = global::SibatuKlmpk5.Properties.Resources.pinjaman;
+            this.btnPinjaman.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPinjaman.Location = new System.Drawing.Point(0, 266);
+            this.btnPinjaman.Name = "btnPinjaman";
+            this.btnPinjaman.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnPinjaman.Size = new System.Drawing.Size(260, 70);
+            this.btnPinjaman.TabIndex = 3;
+            this.btnPinjaman.Text = " Pinjaman";
+            this.btnPinjaman.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPinjaman.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPinjaman.UseVisualStyleBackColor = true;
+            this.btnPinjaman.Click += new System.EventHandler(this.btnPinjaman_Click);
             // 
-            // label4
+            // btnBarang
             // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label4.Name = "label4";
+            this.btnBarang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBarang.FlatAppearance.BorderSize = 0;
+            this.btnBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBarang.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnBarang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.btnBarang.Image = global::SibatuKlmpk5.Properties.Resources.barang;
+            this.btnBarang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBarang.Location = new System.Drawing.Point(0, 196);
+            this.btnBarang.Name = "btnBarang";
+            this.btnBarang.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnBarang.Size = new System.Drawing.Size(260, 70);
+            this.btnBarang.TabIndex = 2;
+            this.btnBarang.Text = " Barang";
+            this.btnBarang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBarang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnBarang.UseVisualStyleBackColor = true;
+            this.btnBarang.Click += new System.EventHandler(this.btnBarang_Click);
             // 
-            // label5
+            // btnDashboard
             // 
-            resources.ApplyResources(this.label5, "label5");
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label5.Name = "label5";
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.btnDashboard.Image = global::SibatuKlmpk5.Properties.Resources.dashboard;
+            this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.Location = new System.Drawing.Point(0, 126);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(260, 70);
+            this.btnDashboard.TabIndex = 1;
+            this.btnDashboard.Text = " Dashboard";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // label6
+            // panelLogo
             // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.ForeColor = System.Drawing.Color.Red;
-            this.label6.Name = "label6";
+            this.panelLogo.Controls.Add(this.pictureBox1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(260, 126);
+            this.panelLogo.TabIndex = 0;
             // 
-            // button1
+            // pictureBox1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.ForeColor = System.Drawing.Color.Snow;
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = global::SibatuKlmpk5.Properties.Resources.sibatu_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 35);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(238, 57);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // label7
+            // panelTop
             // 
-            resources.ApplyResources(this.label7, "label7");
-            this.label7.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label7.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label7.Name = "label7";
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(260, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(544, 51);
+            this.panelTop.TabIndex = 1;
             // 
-            // label8
+            // panelBottom
             // 
-            resources.ApplyResources(this.label8, "label8");
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label8.Name = "label8";
+            this.panelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelBottom.Location = new System.Drawing.Point(260, 467);
+            this.panelBottom.Name = "panelBottom";
+            this.panelBottom.Size = new System.Drawing.Size(544, 51);
+            this.panelBottom.TabIndex = 2;
             // 
-            // label9
+            // panelContainer
             // 
-            resources.ApplyResources(this.label9, "label9");
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.ForeColor = System.Drawing.Color.YellowGreen;
-            this.label9.Name = "label9";
+            this.panelContainer.Controls.Add(this.pictureBox2);
+            this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContainer.Location = new System.Drawing.Point(260, 51);
+            this.panelContainer.Name = "panelContainer";
+            this.panelContainer.Size = new System.Drawing.Size(544, 416);
+            this.panelContainer.TabIndex = 3;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox2.Image = global::SibatuKlmpk5.Properties.Resources.Splash_Screen;
+            this.pictureBox2.Location = new System.Drawing.Point(-41, 65);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(723, 351);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
             // 
             // Dashboard
             // 
-            resources.ApplyResources(this, "$this");
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.DoubleBuffered = true;
+            this.ClientSize = new System.Drawing.Size(804, 518);
+            this.Controls.Add(this.panelContainer);
+            this.Controls.Add(this.panelBottom);
+            this.Controls.Add(this.panelTop);
+            this.Controls.Add(this.panelMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
-            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.Text = "Dashboard";
+            this.panelMenu.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelContainer.ResumeLayout(false);
+            this.panelContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private Label label6;
-        private Button button1;
-        private Label label7;
-        private Label label8;
-        private Label label9;
+        private Panel panelMenu;
+        private Panel panelLogo;
+        private PictureBox pictureBox1;
+        private Button btnDashboard;
+        private Button btnLogout;
+        private Button btnPinjaman;
+        private Button btnBarang;
+        private Panel panelTop;
+        private Panel panelBottom;
+        private Panel panelContainer;
+        private PictureBox pictureBox2;
     }
 }

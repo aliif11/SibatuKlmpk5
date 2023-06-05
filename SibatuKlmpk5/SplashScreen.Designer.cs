@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rjProgressBar1 = new RJCodeAdvance.RJControls.RJProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,36 +40,48 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::SibatuKlmpk5.Properties.Resources.Splash_Screen;
-            this.pictureBox1.Location = new System.Drawing.Point(37, 60);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 58);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(723, 351);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // rjProgressBar1
+            // 
+            this.rjProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjProgressBar1.ChannelColor = System.Drawing.Color.LightSteelBlue;
+            this.rjProgressBar1.ChannelHeight = 12;
+            this.rjProgressBar1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rjProgressBar1.ForeBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.rjProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.rjProgressBar1.Location = new System.Drawing.Point(185, 343);
+            this.rjProgressBar1.Name = "rjProgressBar1";
+            this.rjProgressBar1.ShowMaximun = false;
+            this.rjProgressBar1.ShowValue = RJCodeAdvance.RJControls.TextPosition.Center;
+            this.rjProgressBar1.Size = new System.Drawing.Size(424, 46);
+            this.rjProgressBar1.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
+            this.rjProgressBar1.SliderHeight = 6;
+            this.rjProgressBar1.Step = 15;
+            this.rjProgressBar1.SymbolAfter = "";
+            this.rjProgressBar1.SymbolBefore = "";
+            this.rjProgressBar1.TabIndex = 1;
+            // 
             // timer1
             // 
-            this.timer1.Enabled = true;
+            this.timer1.Interval = 50;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.progressBar1.Location = new System.Drawing.Point(141, 340);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(527, 36);
-            this.progressBar1.TabIndex = 1;
-            // 
-            // SplashScreen
+            // SplashScreen2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.rjProgressBar1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "SplashScreen";
-            this.Text = "SplashScreen";
+            this.Name = "SplashScreen2";
+            this.Text = "SplashScreen2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -79,7 +91,7 @@
         #endregion
 
         private PictureBox pictureBox1;
+        private RJCodeAdvance.RJControls.RJProgressBar rjProgressBar1;
         private System.Windows.Forms.Timer timer1;
-        private ProgressBar progressBar1;
     }
 }

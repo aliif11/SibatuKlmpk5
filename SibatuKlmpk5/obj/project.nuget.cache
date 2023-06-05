@@ -1,8 +1,21 @@
 {
   "version": 2,
-  "dgSpecHash": "zHuICUt+hPrSE+OKidLpnLkWBnauAOjmcdE8QMi1BohrpPhudH1dK9c5mVZI8qE60iUceBDsG4BZxTE40NSaIA==",
+  "dgSpecHash": "mJkYhSTiV7+Os1UQl5EhZCq9OkE+D+XQqdCbHrCOJUSJVXXe0KkWM8CcbEkwp91RbiN1VRRmfFlEaMdzyUVV/g==",
   "success": true,
   "projectFilePath": "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
-  "expectedPackageFiles": [],
-  "logs": []
+  "expectedPackageFiles": [
+    "C:\\Users\\Bagas\\.nuget\\packages\\rjcodeadvance.rjcontrols\\1.0.0\\rjcodeadvance.rjcontrols.1.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RJCodeAdvance.RJControls 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RJCodeAdvance.RJControls",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

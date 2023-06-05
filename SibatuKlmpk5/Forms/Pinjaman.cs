@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SibatuKlmpk5
+namespace SibatuKlmpk5.Forms
 {
-    public partial class MenuBarang : Form
+    public partial class Pinjaman : Form
     {
-        public MenuBarang()
+        public Pinjaman()
         {
             InitializeComponent();
         }

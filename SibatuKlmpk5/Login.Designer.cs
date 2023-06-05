@@ -29,83 +29,118 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            linkLabel1 = new LinkLabel();
-            button1 = new Button();
-            SuspendLayout();
-            // 
-            // textBox1
-            // 
-            textBox1.Font = new Font("Arial", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = Color.FromArgb(255, 192, 192);
-            textBox1.Location = new Point(516, 244);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(348, 32);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "NIP SIAKAD";
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Cascadia Code", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = Color.FromArgb(255, 192, 192);
-            textBox2.Location = new Point(516, 303);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(348, 32);
-            textBox2.TabIndex = 1;
-            textBox2.Text = "Password";
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.rjButton1 = new RJCodeAdvance.RJControls.RJButton();
+            this.rjTextBox1 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.rjTextBox2 = new RJCodeAdvance.RJControls.RJTextBox();
+            this.SuspendLayout();
             // 
             // linkLabel1
             // 
-            linkLabel1.AccessibleRole = AccessibleRole.TitleBar;
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = Color.Transparent;
-            linkLabel1.LinkColor = Color.YellowGreen;
-            linkLabel1.Location = new Point(57, 479);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(166, 15);
-            linkLabel1.TabIndex = 2;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Kembali ke Form Peminjaman";
-            linkLabel1.VisitedLinkColor = Color.YellowGreen;
+            this.linkLabel1.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.linkLabel1.LinkColor = System.Drawing.Color.YellowGreen;
+            this.linkLabel1.Location = new System.Drawing.Point(81, 798);
+            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(275, 25);
+            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Kembali ke Form Peminjaman >>";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.YellowGreen;
             // 
-            // button1
+            // rjButton1
             // 
-            button1.BackColor = Color.Brown;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(653, 360);
-            button1.Name = "button1";
-            button1.Size = new Size(88, 33);
-            button1.TabIndex = 3;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
+            this.rjButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.rjButton1.BorderRadius = 0;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(884, 601);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(225, 60);
+            this.rjButton1.TabIndex = 3;
+            this.rjButton1.Text = "Login";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(798, 475);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox1.Multiline = false;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox1.PasswordChar = true;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(170)))), ((int)(((byte)(155)))));
+            this.rjTextBox1.PlaceholderText = "Password";
+            this.rjTextBox1.Size = new System.Drawing.Size(433, 47);
+            this.rjTextBox1.TabIndex = 4;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
+            // rjTextBox2
+            // 
+            this.rjTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rjTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.rjTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.rjTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.rjTextBox2.BorderRadius = 0;
+            this.rjTextBox2.BorderSize = 2;
+            this.rjTextBox2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rjTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rjTextBox2.Location = new System.Drawing.Point(798, 394);
+            this.rjTextBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.rjTextBox2.Multiline = false;
+            this.rjTextBox2.Name = "rjTextBox2";
+            this.rjTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.rjTextBox2.PasswordChar = false;
+            this.rjTextBox2.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(170)))), ((int)(((byte)(155)))));
+            this.rjTextBox2.PlaceholderText = "Email";
+            this.rjTextBox2.Size = new System.Drawing.Size(433, 47);
+            this.rjTextBox2.TabIndex = 5;
+            this.rjTextBox2.Texts = "";
+            this.rjTextBox2.UnderlinedStyle = false;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(950, 539);
-            Controls.Add(button1);
-            Controls.Add(linkLabel1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            DoubleBuffered = true;
-            Name = "Login";
-            Text = "Login";
-            Load += Login_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1357, 898);
+            this.Controls.Add(this.rjTextBox2);
+            this.Controls.Add(this.rjTextBox1);
+            this.Controls.Add(this.rjButton1);
+            this.Controls.Add(this.linkLabel1);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "Login";
+            this.Text = "Login";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
-
-        private TextBox textBox1;
-        private TextBox textBox2;
         private LinkLabel linkLabel1;
-        private Button button1;
+        private RJCodeAdvance.RJControls.RJButton rjButton1;
+        private RJCodeAdvance.RJControls.RJTextBox rjTextBox1;
+        private RJCodeAdvance.RJControls.RJTextBox rjTextBox2;
     }
 }

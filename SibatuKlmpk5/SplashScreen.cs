@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SibatuKlmpk5
 {
@@ -15,18 +16,23 @@ namespace SibatuKlmpk5
         public SplashScreen()
         {
             InitializeComponent();
+            rjProgressBar1.Value = 0;
+            timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Enabled = true;
-            progressBar1.Increment(2);
-            if (progressBar1.Value == 100)
+            if(rjProgressBar1.Value == 100)
             {
-                timer1.Enabled = false;
+                timer1.Stop();
                 Dashboard dashboard = new Dashboard();
                 dashboard.Show();
                 this.Hide();
+            }
+
+            if(rjProgressBar1.Value < rjProgressBar1.Maximum)
+            {
+                rjProgressBar1.Value++;
             }
         }
     }
