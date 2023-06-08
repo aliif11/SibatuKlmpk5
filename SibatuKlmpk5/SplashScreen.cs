@@ -25,8 +25,8 @@ namespace SibatuKlmpk5
             if(rjProgressBar1.Value == 100)
             {
                 timer1.Stop();
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
+                Login login = new Login();
+                login.Show();
                 this.Hide();
             }
 

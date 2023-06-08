@@ -58,7 +58,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(260, 518);
+            this.panelMenu.Size = new System.Drawing.Size(260, 898);
             this.panelMenu.TabIndex = 0;
             // 
             // btnLogout
@@ -79,6 +79,7 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnPinjaman
             // 
@@ -165,16 +166,16 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(260, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(544, 51);
+            this.panelTop.Size = new System.Drawing.Size(1097, 51);
             this.panelTop.TabIndex = 1;
             // 
             // panelBottom
             // 
             this.panelBottom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
             this.panelBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelBottom.Location = new System.Drawing.Point(260, 467);
+            this.panelBottom.Location = new System.Drawing.Point(260, 847);
             this.panelBottom.Name = "panelBottom";
-            this.panelBottom.Size = new System.Drawing.Size(544, 51);
+            this.panelBottom.Size = new System.Drawing.Size(1097, 51);
             this.panelBottom.TabIndex = 2;
             // 
             // panelContainer
@@ -183,14 +184,14 @@
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(260, 51);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(544, 416);
+            this.panelContainer.Size = new System.Drawing.Size(1097, 796);
             this.panelContainer.TabIndex = 3;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox2.Image = global::SibatuKlmpk5.Properties.Resources.Splash_Screen;
-            this.pictureBox2.Location = new System.Drawing.Point(-41, 65);
+            this.pictureBox2.Location = new System.Drawing.Point(235, 255);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(723, 351);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -201,13 +202,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(804, 518);
+            this.ClientSize = new System.Drawing.Size(1357, 898);
             this.Controls.Add(this.panelContainer);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Dashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
