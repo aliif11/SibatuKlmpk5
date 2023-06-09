@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SibatuKlmpk5.Forms
 {
-    public partial class Dashboard : Form
+    public partial class TambahEditBarang : Form
     {
-        public Dashboard()
+        public TambahEditBarang()
         {
             InitializeComponent();
         }

@@ -1737,11 +1737,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
+      "projectUniqueName": "D:\\clone\\main sibatu\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
       "projectName": "SibatuKlmpk5",
-      "projectPath": "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
+      "projectPath": "D:\\clone\\main sibatu\\SibatuKlmpk5\\SibatuKlmpk5\\SibatuKlmpk5.csproj",
       "packagesPath": "C:\\Users\\Bagas\\.nuget\\packages\\",
-      "outputPath": "D:\\clone\\SibatuKlmpk5\\SibatuKlmpk5\\obj\\",
+      "outputPath": "D:\\clone\\main sibatu\\SibatuKlmpk5\\SibatuKlmpk5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bagas\\AppData\\Roaming\\NuGet\\NuGet.Config",

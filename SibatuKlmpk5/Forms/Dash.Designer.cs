@@ -1,6 +1,6 @@
 ﻿namespace SibatuKlmpk5.Forms
 {
-    partial class Dashboard
+    partial class Dash
     {
         /// <summary>
         /// Required designer variable.

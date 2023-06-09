@@ -25,8 +25,8 @@ namespace SibatuKlmpk5
             if(rjProgressBar1.Value == 100)
             {
                 timer1.Stop();
-                Login login = new Login();
-                login.Show();
+                FormPeminjaman formPeminjaman = new FormPeminjaman();
+                formPeminjaman.Show();
                 this.Hide();
             }
 
