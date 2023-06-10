@@ -29,32 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TambahEditBarang));
-            this.btnTambahEditBarang = new RJCodeAdvance.RJControls.RJButton();
             this.labelTambahEditBarang = new System.Windows.Forms.Label();
             this.labelKodeBarang = new System.Windows.Forms.Label();
             this.textBoxKodeBarang = new RJCodeAdvance.RJControls.RJTextBox();
             this.textBoxNamaBarang = new RJCodeAdvance.RJControls.RJTextBox();
             this.labelNamaBarang = new System.Windows.Forms.Label();
+            this.textBoxId = new RJCodeAdvance.RJControls.RJTextBox();
+            this.btnTambahEditBarang = new RJCodeAdvance.RJControls.RJButton();
+            this.textBoxNamaBarangOld = new RJCodeAdvance.RJControls.RJTextBox();
             this.SuspendLayout();
-            // 
-            // btnTambahEditBarang
-            // 
-            this.btnTambahEditBarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
-            this.btnTambahEditBarang.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
-            this.btnTambahEditBarang.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTambahEditBarang.BorderRadius = 0;
-            this.btnTambahEditBarang.BorderSize = 0;
-            this.btnTambahEditBarang.FlatAppearance.BorderSize = 0;
-            this.btnTambahEditBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTambahEditBarang.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnTambahEditBarang.ForeColor = System.Drawing.Color.White;
-            this.btnTambahEditBarang.Location = new System.Drawing.Point(33, 228);
-            this.btnTambahEditBarang.Name = "btnTambahEditBarang";
-            this.btnTambahEditBarang.Size = new System.Drawing.Size(141, 50);
-            this.btnTambahEditBarang.TabIndex = 13;
-            this.btnTambahEditBarang.Text = "Tambah Edit";
-            this.btnTambahEditBarang.TextColor = System.Drawing.Color.White;
-            this.btnTambahEditBarang.UseVisualStyleBackColor = false;
             // 
             // labelTambahEditBarang
             // 
@@ -131,14 +114,82 @@
             this.labelNamaBarang.TabIndex = 16;
             this.labelNamaBarang.Text = "Nama Barang :";
             // 
+            // textBoxId
+            // 
+            this.textBoxId.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxId.BorderColor = System.Drawing.Color.Black;
+            this.textBoxId.BorderFocusColor = System.Drawing.Color.LimeGreen;
+            this.textBoxId.BorderRadius = 0;
+            this.textBoxId.BorderSize = 2;
+            this.textBoxId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxId.Location = new System.Drawing.Point(33, 318);
+            this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxId.Multiline = false;
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textBoxId.PasswordChar = false;
+            this.textBoxId.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxId.PlaceholderText = "";
+            this.textBoxId.Size = new System.Drawing.Size(259, 39);
+            this.textBoxId.TabIndex = 18;
+            this.textBoxId.Texts = "";
+            this.textBoxId.UnderlinedStyle = false;
+            this.textBoxId.Visible = false;
+            // 
+            // btnTambahEditBarang
+            // 
+            this.btnTambahEditBarang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
+            this.btnTambahEditBarang.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(135)))), ((int)(((byte)(84)))));
+            this.btnTambahEditBarang.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTambahEditBarang.BorderRadius = 0;
+            this.btnTambahEditBarang.BorderSize = 0;
+            this.btnTambahEditBarang.FlatAppearance.BorderSize = 0;
+            this.btnTambahEditBarang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTambahEditBarang.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTambahEditBarang.ForeColor = System.Drawing.Color.White;
+            this.btnTambahEditBarang.Location = new System.Drawing.Point(33, 230);
+            this.btnTambahEditBarang.Name = "btnTambahEditBarang";
+            this.btnTambahEditBarang.Size = new System.Drawing.Size(141, 50);
+            this.btnTambahEditBarang.TabIndex = 19;
+            this.btnTambahEditBarang.Text = "Tambah Edit";
+            this.btnTambahEditBarang.TextColor = System.Drawing.Color.White;
+            this.btnTambahEditBarang.UseVisualStyleBackColor = false;
+            this.btnTambahEditBarang.Click += new System.EventHandler(this.btnTambahEditBarang_Click);
+            // 
+            // textBoxNamaBarangOld
+            // 
+            this.textBoxNamaBarangOld.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxNamaBarangOld.BorderColor = System.Drawing.Color.Black;
+            this.textBoxNamaBarangOld.BorderFocusColor = System.Drawing.Color.LimeGreen;
+            this.textBoxNamaBarangOld.BorderRadius = 0;
+            this.textBoxNamaBarangOld.BorderSize = 2;
+            this.textBoxNamaBarangOld.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNamaBarangOld.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBoxNamaBarangOld.Location = new System.Drawing.Point(334, 318);
+            this.textBoxNamaBarangOld.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxNamaBarangOld.Multiline = false;
+            this.textBoxNamaBarangOld.Name = "textBoxNamaBarangOld";
+            this.textBoxNamaBarangOld.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.textBoxNamaBarangOld.PasswordChar = false;
+            this.textBoxNamaBarangOld.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.textBoxNamaBarangOld.PlaceholderText = "";
+            this.textBoxNamaBarangOld.Size = new System.Drawing.Size(259, 39);
+            this.textBoxNamaBarangOld.TabIndex = 20;
+            this.textBoxNamaBarangOld.Texts = "";
+            this.textBoxNamaBarangOld.UnderlinedStyle = false;
+            this.textBoxNamaBarangOld.Visible = false;
+            // 
             // TambahEditBarang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(655, 400);
+            this.Controls.Add(this.textBoxNamaBarangOld);
+            this.Controls.Add(this.btnTambahEditBarang);
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.textBoxNamaBarang);
             this.Controls.Add(this.labelNamaBarang);
-            this.Controls.Add(this.btnTambahEditBarang);
             this.Controls.Add(this.textBoxKodeBarang);
             this.Controls.Add(this.labelKodeBarang);
             this.Controls.Add(this.labelTambahEditBarang);
@@ -153,10 +204,12 @@
 
         #endregion
         private Label labelKodeBarang;
-        private RJCodeAdvance.RJControls.RJTextBox textBoxKodeBarang;
-        private RJCodeAdvance.RJControls.RJTextBox textBoxNamaBarang;
         private Label labelNamaBarang;
         public Label labelTambahEditBarang;
+        public RJCodeAdvance.RJControls.RJTextBox textBoxKodeBarang;
+        public RJCodeAdvance.RJControls.RJTextBox textBoxNamaBarang;
+        public RJCodeAdvance.RJControls.RJTextBox textBoxId;
         public RJCodeAdvance.RJControls.RJButton btnTambahEditBarang;
+        public RJCodeAdvance.RJControls.RJTextBox textBoxNamaBarangOld;
     }
 }

@@ -62,6 +62,7 @@
             this.dataGridViewBarang.RowTemplate.Height = 33;
             this.dataGridViewBarang.Size = new System.Drawing.Size(857, 581);
             this.dataGridViewBarang.TabIndex = 1;
+            this.dataGridViewBarang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBarang_CellClick);
             // 
             // labelSearch
             // 
@@ -175,6 +176,7 @@
             this.btnHapusBarang.Text = "Hapus";
             this.btnHapusBarang.TextColor = System.Drawing.Color.White;
             this.btnHapusBarang.UseVisualStyleBackColor = false;
+            this.btnHapusBarang.Click += new System.EventHandler(this.btnHapusBarang_Click);
             // 
             // Barang
             // 
@@ -199,14 +201,13 @@
         }
 
         #endregion
-
-        private Label labelBarang;
-        private DataGridView dataGridViewBarang;
         private Label labelSearch;
         private RJCodeAdvance.RJControls.RJTextBox textBoxSearch;
         private RJCodeAdvance.RJControls.RJButton btnSearch;
         private RJCodeAdvance.RJControls.RJButton btnTambahBarang;
         private RJCodeAdvance.RJControls.RJButton btnEditBarang;
         private RJCodeAdvance.RJControls.RJButton btnHapusBarang;
+        private DataGridView dataGridViewBarang;
+        public Label labelBarang;
     }
 }
