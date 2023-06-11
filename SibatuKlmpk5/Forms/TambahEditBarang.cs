@@ -85,8 +85,6 @@ namespace SibatuKlmpk5.Forms
                 if(result.ToString() == "Yes")
                 {
                     tambahEditLogic("Edit", errorTitle, namaBarangOld);
-                    Barang barang = new Barang();
-                    barang.coba();
                 }
                 
             } else

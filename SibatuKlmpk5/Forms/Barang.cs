@@ -51,8 +51,8 @@ namespace SibatuKlmpk5.Forms
 
             dataGridViewBarang.DataSource = ds.Tables["barang"].DefaultView;
             dataGridViewBarang.EnableHeadersVisualStyles = false;
-            dataGridViewBarang.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217,217,217);
-            dataGridViewBarang.ColumnHeadersDefaultCellStyle.Font = new Font("Arial",9, FontStyle.Bold);
+            dataGridViewBarang.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(217, 217, 217);
+            dataGridViewBarang.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9, FontStyle.Bold);
             dataGridViewBarang.ColumnHeadersDefaultCellStyle.Padding = new Padding(4);
             dataGridViewBarang.Columns[1].HeaderText = "Kode Barang";
             dataGridViewBarang.Columns[2].HeaderText = "Nama Barang";
@@ -60,11 +60,6 @@ namespace SibatuKlmpk5.Forms
 
             dataGridViewBarang.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewBarang.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-        }
-
-        public void coba()
-        {
-            labelBarang.Text = "HALOOOOO";
         }
 
         private void btnTambahBarang_Click(object sender, EventArgs e)
@@ -136,6 +131,7 @@ namespace SibatuKlmpk5.Forms
                              "Berhasil Menghapus Barang",
                              MessageBoxButtons.OK,
                              MessageBoxIcon.Information);
+                    tampilkanData();
                     connection.Close();
                 } catch(Exception ex)
                 {

@@ -289,6 +289,7 @@
             this.btnPinjaman.Text = "Pinjaman";
             this.btnPinjaman.TextColor = System.Drawing.Color.White;
             this.btnPinjaman.UseVisualStyleBackColor = false;
+            this.btnPinjaman.Click += new System.EventHandler(this.btnPinjaman_Click);
             // 
             // comboBoxBarang
             // 
@@ -308,10 +309,10 @@
             this.comboBoxBarang.ForeColor = System.Drawing.Color.DimGray;
             this.comboBoxBarang.IconColor = System.Drawing.Color.MediumSlateBlue;
             this.comboBoxBarang.Items.AddRange(new object[] {
-            "Infocus",
+            "Infocus Epson",
             "Kabel HDMI",
-            "Kabel Lan",
-            "Kipas Angin"});
+            "Kabel VGA",
+            "Kabel Lan"});
             this.comboBoxBarang.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxBarang.ListTextColor = System.Drawing.Color.DimGray;
             this.comboBoxBarang.Location = new System.Drawing.Point(169, 358);
