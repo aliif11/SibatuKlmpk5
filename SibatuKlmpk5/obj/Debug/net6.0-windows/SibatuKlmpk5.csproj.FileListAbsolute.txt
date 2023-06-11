@@ -117,5 +117,5 @@ D:\clone\main sibatu\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\refint\S
 D:\clone\main sibatu\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.pdb
 D:\clone\main sibatu\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.genruntimeconfig.cache
 D:\clone\main sibatu\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\ref\SibatuKlmpk5.dll
-D:\clone\main sibatu\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Forms.Dash.resources
 D:\clone\main sibatu\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Forms.TambahEditBarang.resources
+D:\clone\main sibatu\SibatuKlmpk5\SibatuKlmpk5\obj\Debug\net6.0-windows\SibatuKlmpk5.Forms.RequestPinjaman.resources

@@ -67,7 +67,7 @@ namespace SibatuKlmpk5
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Dash(), sender);
+            OpenChildForm(new Forms.RequestPinjaman(), sender);
         }
 
         private void btnBarang_Click(object sender, EventArgs e)

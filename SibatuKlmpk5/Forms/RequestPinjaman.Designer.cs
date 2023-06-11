@@ -1,6 +1,6 @@
 ﻿namespace SibatuKlmpk5.Forms
 {
-    partial class Dash
+    partial class RequestPinjaman
     {
         /// <summary>
         /// Required designer variable.
@@ -137,14 +137,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 796);
+            this.Controls.Add(this.dataGridViewReqPinjaman);
             this.Controls.Add(this.btnTambahBarang);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelSearch);
-            this.Controls.Add(this.dataGridViewReqPinjaman);
             this.Controls.Add(this.labelPinjaman);
             this.Name = "Dash";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReqPinjaman)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
