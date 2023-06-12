@@ -84,10 +84,9 @@ namespace SibatuKlmpk5.Forms
             if (isIdNotSelected())
                 return;
 
-            string[] value = getReqPeminjamanValue();
+            List<object> value = getReqPeminjamanValue();
             MySqlCommand cmd;
             MySqlCommand command;
-            string tanggalFormat = getTanggalFormat(value[3]);
 
             command = connection.CreateCommand();
             cmd = connection.CreateCommand();
@@ -95,7 +94,7 @@ namespace SibatuKlmpk5.Forms
             command.CommandText = "INSERT INTO peminjaman(id_users,id_barang,tanggal,waktu_mulai,waktu_akhir) VALUES (@users,@barang,@tanggal,@mulai,@akhir)";
             command.Parameters.AddWithValue("@users", value[1]);
             command.Parameters.AddWithValue("@barang", value[2]);
-            command.Parameters.AddWithValue("@tanggal", tanggalFormat);
+            command.Parameters.AddWithValue("@tanggal", value[3]);
             command.Parameters.AddWithValue("@mulai", value[4]);
             command.Parameters.AddWithValue("@akhir", value[5]);
 
@@ -152,9 +151,9 @@ namespace SibatuKlmpk5.Forms
             return false;
         }
 
-        private string[] getReqPeminjamanValue()
+        private List<object> getReqPeminjamanValue()
         {
-            var resultList = new List<string>();
+            var resultList = new List<object>();
             MySqlCommand command;
             MySqlDataReader reader;
 
@@ -169,27 +168,17 @@ namespace SibatuKlmpk5.Forms
             {
                 int columnCount = reader.FieldCount;
 
-                // Read the data and display it in the console
                 while (reader.Read())
                 {
                     for (int i = 0; i < columnCount; i++)
                     {
-                        resultList.Add(reader.GetString(i));
+                        resultList.Add(reader.GetValue(i));
                     }
                 }
             }
             connection.Close();
 
-            return resultList.ToArray();
-        }
-
-        private string getTanggalFormat(string tanggal)
-        {
-            int hari = Convert.ToInt32(tanggal.Substring(0, 2));
-            int bulan = Convert.ToInt32(tanggal.Substring(3, 2));
-            int tahun = Convert.ToInt32(tanggal.Substring(6, 4));
-            DateTime dateTime= new DateTime(tahun,bulan,hari);
-            return dateTime.ToString("yyyy-MM-dd");
+            return resultList;
         }
     }
 }

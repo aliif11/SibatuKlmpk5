@@ -89,6 +89,9 @@
             // 
             // dataGridViewPinjaman
             // 
+            this.dataGridViewPinjaman.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewPinjaman.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewPinjaman.Location = new System.Drawing.Point(29, 161);
             this.dataGridViewPinjaman.Name = "dataGridViewPinjaman";
@@ -99,7 +102,6 @@
             // 
             // labelPinjaman
             // 
-            this.labelPinjaman.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelPinjaman.AutoSize = true;
             this.labelPinjaman.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.labelPinjaman.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(169)))), ((int)(((byte)(88)))));
@@ -121,6 +123,7 @@
             this.Controls.Add(this.labelPinjaman);
             this.Name = "Pinjaman";
             this.Text = "Pinjaman";
+            this.Load += new System.EventHandler(this.Pinjaman_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPinjaman)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
