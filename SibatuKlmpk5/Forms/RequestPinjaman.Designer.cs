@@ -100,6 +100,7 @@
             this.dataGridViewReqPinjaman.RowTemplate.Height = 33;
             this.dataGridViewReqPinjaman.Size = new System.Drawing.Size(857, 581);
             this.dataGridViewReqPinjaman.TabIndex = 14;
+            this.dataGridViewReqPinjaman.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewReqPinjaman_CellClick);
             // 
             // labelPinjaman
             // 
@@ -131,8 +132,9 @@
             this.btnTambahBarang.Text = "Setujui Peminjaman";
             this.btnTambahBarang.TextColor = System.Drawing.Color.White;
             this.btnTambahBarang.UseVisualStyleBackColor = false;
+            this.btnTambahBarang.Click += new System.EventHandler(this.btnTambahBarang_Click);
             // 
-            // Dash
+            // RequestPinjaman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -143,7 +145,7 @@
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.labelPinjaman);
-            this.Name = "Dash";
+            this.Name = "RequestPinjaman";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReqPinjaman)).EndInit();

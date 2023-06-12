@@ -102,7 +102,7 @@ namespace SibatuKlmpk5
             }
             catch (Exception ex)
             {
-                showError($"Data gagal di Pinjam \n" + ex.Message, $"Gagal Meminjam Barang");
+                showError($"Data gagal di Pinjam \n" + ex.Message, "Gagal Meminjam Barang");
                 connection.Close();
             }
         }
