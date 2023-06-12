@@ -156,5 +156,20 @@ namespace SibatuKlmpk5.Forms
             }
             return false;
         }
+
+        private void textBoxSearch__TextChanged(object sender, EventArgs e)
+        {
+            searchData(textBoxSearch.Texts);
+        }
+
+        private void searchData(string valueToFind)
+        {
+            string query = $"SELECT * FROM barang WHERE nama LIKE'%{valueToFind}%' OR kode LIKE'%{valueToFind}%'";
+            MySqlDataAdapter da = new MySqlDataAdapter(query, connection);
+            System.Data.DataSet ds = new System.Data.DataSet();
+            da.Fill(ds, "barang");
+
+            dataGridViewBarang.DataSource = ds.Tables["barang"].DefaultView;
+        }
     }
 }

@@ -32,7 +32,6 @@
             this.dataGridViewBarang = new System.Windows.Forms.DataGridView();
             this.labelSearch = new System.Windows.Forms.Label();
             this.textBoxSearch = new RJCodeAdvance.RJControls.RJTextBox();
-            this.btnSearch = new RJCodeAdvance.RJControls.RJButton();
             this.btnTambahBarang = new RJCodeAdvance.RJControls.RJButton();
             this.btnEditBarang = new RJCodeAdvance.RJControls.RJButton();
             this.btnHapusBarang = new RJCodeAdvance.RJControls.RJButton();
@@ -95,25 +94,7 @@
             this.textBoxSearch.TabIndex = 3;
             this.textBoxSearch.Texts = "";
             this.textBoxSearch.UnderlinedStyle = false;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.btnSearch.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.btnSearch.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnSearch.BorderRadius = 0;
-            this.btnSearch.BorderSize = 0;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(744, 86);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(141, 50);
-            this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.TextColor = System.Drawing.Color.White;
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.textBoxSearch._TextChanged += new System.EventHandler(this.textBoxSearch__TextChanged);
             // 
             // btnTambahBarang
             // 
@@ -186,7 +167,6 @@
             this.Controls.Add(this.btnHapusBarang);
             this.Controls.Add(this.btnEditBarang);
             this.Controls.Add(this.btnTambahBarang);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.labelSearch);
             this.Controls.Add(this.dataGridViewBarang);
@@ -203,7 +183,6 @@
         #endregion
         private Label labelSearch;
         private RJCodeAdvance.RJControls.RJTextBox textBoxSearch;
-        private RJCodeAdvance.RJControls.RJButton btnSearch;
         private RJCodeAdvance.RJControls.RJButton btnTambahBarang;
         private RJCodeAdvance.RJControls.RJButton btnEditBarang;
         private RJCodeAdvance.RJControls.RJButton btnHapusBarang;

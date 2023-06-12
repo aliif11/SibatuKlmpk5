@@ -180,5 +180,21 @@ namespace SibatuKlmpk5.Forms
 
             return resultList;
         }
+
+        private void textBoxSearch__TextChanged(object sender, EventArgs e)
+        {
+            searchData(textBoxSearch.Texts);
+        }
+
+        private void searchData(string valueToFind)
+        {
+            string query = $"SELECT req_peminjaman.id, users.nama, barang.nama, tanggal, waktu_mulai, waktu_akhir FROM req_peminjaman\r\nJOIN users\r\n  ON req_peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON req_peminjaman.id_barang = barang.id WHERE users.nama LIKE'%{valueToFind}%' OR barang.nama LIKE'%{valueToFind}%'";
+            MySqlDataAdapter da = new MySqlDataAdapter(query, connection);
+            System.Data.DataSet ds = new System.Data.DataSet();
+            da.Fill(ds, "req_peminjaman");
+
+            dataGridViewReqPinjaman.DataSource = ds.Tables["req_peminjaman"].DefaultView;
+            dataGridViewReqPinjaman.EnableHeadersVisualStyles = false;
+        }
     }
 }

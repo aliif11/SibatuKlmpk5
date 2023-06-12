@@ -76,5 +76,21 @@ namespace SibatuKlmpk5.Forms
             dataGridViewPinjaman.Columns[4].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             dataGridViewPinjaman.Columns[5].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
         }
+
+        private void textBoxSearch__TextChanged(object sender, EventArgs e)
+        {
+            searchData(textBoxSearch.Texts);
+        }
+
+        private void searchData(string valueToFind)
+        {
+            string query = $"SELECT peminjaman.id, users.nama, barang.nama, tanggal, waktu_mulai, waktu_akhir FROM peminjaman\r\nJOIN users\r\n  ON peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON peminjaman.id_barang = barang.id WHERE users.nama LIKE'%{valueToFind}%' OR barang.nama LIKE'%{valueToFind}%'";
+            MySqlDataAdapter da = new MySqlDataAdapter(query, connection);
+            System.Data.DataSet ds = new System.Data.DataSet();
+            da.Fill(ds, "peminjaman");
+
+            dataGridViewPinjaman.DataSource = ds.Tables["peminjaman"].DefaultView;
+            dataGridViewPinjaman.EnableHeadersVisualStyles = false;
+        }
     }
 }
