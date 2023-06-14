@@ -102,13 +102,22 @@ namespace SibatuKlmpk5.Forms
 
         private void dataGridViewBarang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectedId = Convert.ToInt32(dataGridViewBarang.Rows[e.RowIndex].Cells[0].Value);
-            RJMessageBox.Show("Anda Memilih id barang: " + selectedId,
-                             "Pilih id Barang",
-                             MessageBoxButtons.OK,
-                             MessageBoxIcon.Information);
-            kodeBarangEdit = dataGridViewBarang.Rows[e.RowIndex].Cells[1].Value.ToString();
-            namaBarangEdit = dataGridViewBarang.Rows[e.RowIndex].Cells[2].Value.ToString();
+            try
+            {
+                selectedId = Convert.ToInt32(dataGridViewBarang.Rows[e.RowIndex].Cells[0].Value);
+                RJMessageBox.Show("Anda Memilih id barang: " + selectedId,
+                                 "Pilih id Barang",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                kodeBarangEdit = dataGridViewBarang.Rows[e.RowIndex].Cells[1].Value.ToString();
+                namaBarangEdit = dataGridViewBarang.Rows[e.RowIndex].Cells[2].Value.ToString();
+            } catch (Exception ex)
+            {
+                RJMessageBox.Show("Tabel diurutkan berdasarkan " + dataGridViewBarang.Columns[e.ColumnIndex].HeaderText,
+                               "Mengubah Urutan Tabel",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Information);
+            }
         }
 
         private void btnHapusBarang_Click(object sender, EventArgs e)
@@ -227,5 +236,6 @@ namespace SibatuKlmpk5.Forms
             statusBarang = Convert.ToInt32(command.ExecuteScalar());
             connection.Close();
         }
+
     }
 }

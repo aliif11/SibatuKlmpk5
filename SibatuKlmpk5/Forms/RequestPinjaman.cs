@@ -138,11 +138,20 @@ namespace SibatuKlmpk5.Forms
 
         private void dataGridViewReqPinjaman_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectedId = Convert.ToInt32(dataGridViewReqPinjaman.Rows[e.RowIndex].Cells[0].Value);
-            RJMessageBox.Show("Anda Memilih permintaan peminjaman dengan id : " + selectedId,
-                             "Pilih id Peminjaman",
-                             MessageBoxButtons.OK,
-                             MessageBoxIcon.Information);
+            try
+            {
+                selectedId = Convert.ToInt32(dataGridViewReqPinjaman.Rows[e.RowIndex].Cells[0].Value);
+                RJMessageBox.Show("Anda Memilih permintaan peminjaman dengan id : " + selectedId,
+                                 "Pilih id Peminjaman",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+            } catch(Exception ex)
+            {
+                RJMessageBox.Show("Tabel diurutkan berdasarkan " + dataGridViewReqPinjaman.Columns[e.ColumnIndex].HeaderText,
+                               "Mengubah Urutan Tabel",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Information);
+            }
         }
 
         private bool isIdNotSelected()
