@@ -35,6 +35,7 @@
             this.btnTambahBarang = new RJCodeAdvance.RJControls.RJButton();
             this.btnEditBarang = new RJCodeAdvance.RJControls.RJButton();
             this.btnHapusBarang = new RJCodeAdvance.RJControls.RJButton();
+            this.btnUbahStatus = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBarang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -159,11 +160,33 @@
             this.btnHapusBarang.UseVisualStyleBackColor = false;
             this.btnHapusBarang.Click += new System.EventHandler(this.btnHapusBarang_Click);
             // 
+            // btnUbahStatus
+            // 
+            this.btnUbahStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUbahStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(99)))), ((int)(((byte)(106)))));
+            this.btnUbahStatus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(99)))), ((int)(((byte)(106)))));
+            this.btnUbahStatus.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUbahStatus.BorderRadius = 0;
+            this.btnUbahStatus.BorderSize = 0;
+            this.btnUbahStatus.FlatAppearance.BorderSize = 0;
+            this.btnUbahStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUbahStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUbahStatus.ForeColor = System.Drawing.Color.White;
+            this.btnUbahStatus.Location = new System.Drawing.Point(933, 405);
+            this.btnUbahStatus.Name = "btnUbahStatus";
+            this.btnUbahStatus.Size = new System.Drawing.Size(141, 50);
+            this.btnUbahStatus.TabIndex = 8;
+            this.btnUbahStatus.Text = "Ubah Status";
+            this.btnUbahStatus.TextColor = System.Drawing.Color.White;
+            this.btnUbahStatus.UseVisualStyleBackColor = false;
+            this.btnUbahStatus.Click += new System.EventHandler(this.btnUbahStatus_Click);
+            // 
             // Barang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 796);
+            this.Controls.Add(this.btnUbahStatus);
             this.Controls.Add(this.btnHapusBarang);
             this.Controls.Add(this.btnEditBarang);
             this.Controls.Add(this.btnTambahBarang);
@@ -188,5 +211,6 @@
         private RJCodeAdvance.RJControls.RJButton btnHapusBarang;
         private DataGridView dataGridViewBarang;
         public Label labelBarang;
+        private RJCodeAdvance.RJControls.RJButton btnUbahStatus;
     }
 }

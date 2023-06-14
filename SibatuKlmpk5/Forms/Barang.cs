@@ -10,12 +10,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SibatuKlmpk5;
 using CustomMessageBox;
+using System.Data.SqlTypes;
 
 namespace SibatuKlmpk5.Forms
 {
     public partial class Barang : Form
     {
         private int selectedId;
+        private int statusBarang;
         private string kodeBarangEdit;
         private string namaBarangEdit;
         private MySqlConnection connection;
@@ -93,7 +95,8 @@ namespace SibatuKlmpk5.Forms
                 tambahEditBarang.textBoxNamaBarang.Texts = namaBarang;
                 tambahEditBarang.textBoxId.Texts = selectedId.ToString();
                 tambahEditBarang.textBoxNamaBarangOld.Texts = namaBarang;
-                tambahEditBarang.Show();
+                tambahEditBarang.ShowDialog();
+                this.tampilkanData();
             }
         }
 
@@ -170,6 +173,59 @@ namespace SibatuKlmpk5.Forms
             da.Fill(ds, "barang");
 
             dataGridViewBarang.DataSource = ds.Tables["barang"].DefaultView;
+        }
+
+        private void btnUbahStatus_Click(object sender, EventArgs e)
+        {
+            if (isIdNotSelected())
+                return;
+
+            getStatusBarang();
+            int statusToChange = (statusBarang == 1) ? 0 : 1;
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd = connection.CreateCommand();
+            cmd.CommandText = $"UPDATE barang SET status = {statusToChange} WHERE id = @id";
+            cmd.Parameters.AddWithValue("@id", selectedId);
+
+            string statusMsg = (statusBarang == 1) ? "tidak tersedia" : "tersedia";
+            var result = RJMessageBox.Show($"Apakah anda ingin mengubah status barang dengan id: {selectedId} menjadi {statusMsg}?",
+                                              "Konfirmasi",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Warning);
+            if (result.ToString() == "Yes")
+            {
+                try
+                {
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    RJMessageBox.Show("Status " + namaBarangEdit + " Telah Diubah",
+                             "Berhasil Mengubah Status Barang",
+                             MessageBoxButtons.OK,
+                             MessageBoxIcon.Information);
+                    tampilkanData();
+                    connection.Close();
+                }
+                catch (Exception ex)
+                {
+                    RJMessageBox.Show("Status Barang Gagal diubah \n" + ex.Message,
+                                      "Gagal Mengubah Status Barang",
+                                      MessageBoxButtons.OK,
+                                      MessageBoxIcon.Error);
+                    connection.Close();
+                }
+            }
+        }
+
+        private void getStatusBarang()
+        {
+            MySqlCommand command = new MySqlCommand();
+            command = connection.CreateCommand();
+            command.CommandText = "SELECT status FROM barang WHERE id = @id";
+            command.Parameters.AddWithValue("@id", selectedId);
+            connection.Open();
+            statusBarang = Convert.ToInt32(command.ExecuteScalar());
+            connection.Close();
         }
     }
 }

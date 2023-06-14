@@ -73,37 +73,50 @@ namespace SibatuKlmpk5
             if (validateReqPeminjaman(nim_nip, no_telp, barang, waktu_mulai, waktu_akhir))
                 return;
 
-            cmd = connection.CreateCommand();
-            cmd.CommandText = query;
-
             searchIdUsers(nim_nip);
+            if (idUsers == 0)
+            {
+                showError("NIM atau NIP tidak ditemukan", "Gagal Pinjam Barang");
+                return;
+            }
+
             searchIdBarang(barang);
+
             DateTime today = DateTime.Today;
             string tanggal = today.ToString("yyyy-MM-dd");
             waktu_mulai += ":00";
             waktu_akhir += ":00";
 
+            cmd = connection.CreateCommand();
+            cmd.CommandText = query;
             cmd.Parameters.AddWithValue("@users", idUsers);
             cmd.Parameters.AddWithValue("@barang", idBarang);
             cmd.Parameters.AddWithValue("@tanggal", tanggal);
             cmd.Parameters.AddWithValue("@mulai", waktu_mulai);
             cmd.Parameters.AddWithValue("@akhir", waktu_akhir);
 
-            try
+            var result = RJMessageBox.Show("Pastikan Semua Data Yang Di Input Telah Benar?",
+                                              "Konfirmasi",
+                                              MessageBoxButtons.YesNo,
+                                              MessageBoxIcon.Warning);
+            if (result.ToString() == "Yes")
             {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                RJMessageBox.Show("Terimakasih telah menggunakan Sistem Kami, Silahkan temui petugas dan ambil barang anda :)",
-                             "Barang Berhasil Di Pinjam",
-                             MessageBoxButtons.OK,
-                             MessageBoxIcon.Information);
-                TextBoxEmpty();
-            }
-            catch (Exception ex)
-            {
-                showError($"Data gagal di Pinjam \n" + ex.Message, "Gagal Meminjam Barang");
-                connection.Close();
+                try
+                {
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    RJMessageBox.Show("Terimakasih telah menggunakan Sistem Kami, Silahkan temui petugas dan ambil barang anda :)",
+                                 "Barang Berhasil Di Pinjam",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                    TextBoxEmpty();
+                }
+                catch (Exception ex)
+                {
+                    showError($"Data gagal di Pinjam \n" + ex.Message, "Gagal Meminjam Barang");
+                    connection.Close();
+                }
             }
         }
 
@@ -125,7 +138,7 @@ namespace SibatuKlmpk5
 
             if (nim_nip.Length != 9)
             {
-                showError("NIM atau NIP tidak valid, NIM atau NIP harus 9 karakter", "Gagal Tambah Barang");
+                showError("NIM atau NIP tidak valid, NIM atau NIP harus 9 karakter", "Gagal Pinjam Barang");
                 return true;
             }
 
@@ -147,6 +160,29 @@ namespace SibatuKlmpk5
                 return true;
             }
 
+            try
+            {
+                TimeSpan timeWaktuMulai = TimeSpan.Parse(waktu_mulai);
+                TimeSpan timeWaktuAkhir = TimeSpan.Parse(waktu_akhir);
+
+                if(timeWaktuAkhir < timeWaktuMulai)
+                {
+                    showError("Waktu Yang Di Input Salah Waktu Awal Harus Lebih dulu daripada Waktu Akhir", "Gagal Pinjam Barang");
+                    return true;
+                }
+
+                if ((timeWaktuMulai.Hours >= 0 && timeWaktuMulai.Hours <= 6) || (timeWaktuMulai.Hours >= 18 && timeWaktuMulai.Hours <= 23))
+                {
+                    showError("Peminjaman Hanya dapat dilakukan pada jam 07:00-17:00", "Gagal Pinjam Barang");
+                    return true;
+                }
+
+            } catch(Exception ex)
+            {
+                showError("Waktu Yang Di Input Tidak Valid", "Gagal Pinjam Barang");
+                return true;
+            }
+        
             return false;
         }
 
@@ -166,6 +202,44 @@ namespace SibatuKlmpk5
             MySqlCommand command = new MySqlCommand(query, connection);
             idBarang = Convert.ToInt32(command.ExecuteScalar());
             connection.Close();
+        }
+
+        private void FormPeminjaman_Load(object sender, EventArgs e)
+        {
+            string[] barangAvailable = getBarangAvailable();
+            foreach(string barang in barangAvailable)
+            {
+                comboBoxBarang.Items.Add(barang);
+            }
+        }
+
+        private string[] getBarangAvailable()
+        {
+            var resultList = new List<string>();
+            MySqlCommand command;
+            MySqlDataReader reader;
+
+            command = connection.CreateCommand();
+            command.CommandText = "SELECT nama FROM barang WHERE status = 1";
+
+            connection.Open();
+            reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                int columnCount = reader.FieldCount;
+
+                while (reader.Read())
+                {
+                    for (int i = 0; i < columnCount; i++)
+                    {
+                        resultList.Add(reader.GetString(i));
+                    }
+                }
+            }
+            connection.Close();
+
+            return resultList.ToArray();
         }
     }
 }

@@ -86,10 +86,12 @@ namespace SibatuKlmpk5.Forms
 
             List<object> value = getReqPeminjamanValue();
             MySqlCommand cmd;
+            MySqlCommand sqlCmd;
             MySqlCommand command;
 
             command = connection.CreateCommand();
             cmd = connection.CreateCommand();
+            sqlCmd = connection.CreateCommand();
 
             command.CommandText = "INSERT INTO peminjaman(id_users,id_barang,tanggal,waktu_mulai,waktu_akhir) VALUES (@users,@barang,@tanggal,@mulai,@akhir)";
             command.Parameters.AddWithValue("@users", value[1]);
@@ -101,7 +103,10 @@ namespace SibatuKlmpk5.Forms
             cmd.CommandText = "DELETE FROM req_peminjaman WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", selectedId);
 
-            var result = RJMessageBox.Show($"Anda yakin ingin menghapus data dengan id: {selectedId} ?",
+            sqlCmd.CommandText = "UPDATE barang SET status = 0 WHERE id = @id";
+            sqlCmd.Parameters.AddWithValue("@id", value[2]);
+
+            var result = RJMessageBox.Show($"Anda yakin ingin menyutujui peminjaman dengan id: {selectedId} ?",
                                                "Konfirmasi",
                                                MessageBoxButtons.YesNo,
                                                MessageBoxIcon.Warning);
@@ -112,11 +117,13 @@ namespace SibatuKlmpk5.Forms
                     connection.Open();
                     command.ExecuteNonQuery();
                     cmd.ExecuteNonQuery();
+                    sqlCmd.ExecuteNonQuery();
                     connection.Close();
                     RJMessageBox.Show("Terimakasih telah menggunakan Sistem Kami, Silahkan berikan barang kepada peminjam :)",
                                  "Peminjaman disetujui",
                                  MessageBoxButtons.OK,
                                  MessageBoxIcon.Information);
+                    tampilkanData();
                 }
                 catch (Exception ex)
                 {
@@ -132,8 +139,8 @@ namespace SibatuKlmpk5.Forms
         private void dataGridViewReqPinjaman_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedId = Convert.ToInt32(dataGridViewReqPinjaman.Rows[e.RowIndex].Cells[0].Value);
-            RJMessageBox.Show("Anda Memilih id barang: " + selectedId,
-                             "Pilih id Barang",
+            RJMessageBox.Show("Anda Memilih permintaan peminjaman dengan id : " + selectedId,
+                             "Pilih id Peminjaman",
                              MessageBoxButtons.OK,
                              MessageBoxIcon.Information);
         }
@@ -195,6 +202,47 @@ namespace SibatuKlmpk5.Forms
 
             dataGridViewReqPinjaman.DataSource = ds.Tables["req_peminjaman"].DefaultView;
             dataGridViewReqPinjaman.EnableHeadersVisualStyles = false;
+        }
+
+        private void btnTolakPeminjaman_Click(object sender, EventArgs e)
+        {
+            if (isIdNotSelected())
+                return;
+
+            MySqlCommand cmd;
+
+            cmd = connection.CreateCommand();
+
+            cmd.CommandText = "DELETE FROM req_peminjaman WHERE id = @id";
+            cmd.Parameters.AddWithValue("@id", selectedId);
+
+
+            var result = RJMessageBox.Show($"Anda yakin ingin menolak peminjaman dengan data id: {selectedId} ?",
+                                               "Konfirmasi",
+                                               MessageBoxButtons.YesNo,
+                                               MessageBoxIcon.Warning);
+            if (result.ToString() == "Yes")
+            {
+                try
+                {
+                    connection.Open();
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    RJMessageBox.Show("Peminjaman di Tolak, Permintaan Peminjaman dihapus",
+                                 "Peminjaman di Tolak",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Information);
+                    tampilkanData();
+                }
+                catch (Exception ex)
+                {
+                    RJMessageBox.Show($"Data gagal di Setujui \n" + ex.Message,
+                     "Gagal Menyetujui Peminjaman Barang",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Error);
+                    connection.Close();
+                }
+            }
         }
     }
 }

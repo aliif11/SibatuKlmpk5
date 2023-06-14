@@ -308,11 +308,6 @@
             this.comboBoxBarang.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboBoxBarang.ForeColor = System.Drawing.Color.DimGray;
             this.comboBoxBarang.IconColor = System.Drawing.Color.MediumSlateBlue;
-            this.comboBoxBarang.Items.AddRange(new object[] {
-            "Infocus Epson",
-            "Kabel HDMI",
-            "Kabel VGA",
-            "Kabel Lan"});
             this.comboBoxBarang.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(228)))), ((int)(((byte)(245)))));
             this.comboBoxBarang.ListTextColor = System.Drawing.Color.DimGray;
             this.comboBoxBarang.Location = new System.Drawing.Point(169, 358);
@@ -384,6 +379,7 @@
             this.Name = "FormPeminjaman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form Peminjaman";
+            this.Load += new System.EventHandler(this.FormPeminjaman_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

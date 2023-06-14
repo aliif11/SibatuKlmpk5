@@ -33,6 +33,7 @@
             this.dataGridViewReqPinjaman = new System.Windows.Forms.DataGridView();
             this.labelPinjaman = new System.Windows.Forms.Label();
             this.btnTambahBarang = new RJCodeAdvance.RJControls.RJButton();
+            this.btnTolakPeminjaman = new RJCodeAdvance.RJControls.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReqPinjaman)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,11 +116,33 @@
             this.btnTambahBarang.UseVisualStyleBackColor = false;
             this.btnTambahBarang.Click += new System.EventHandler(this.btnTambahBarang_Click);
             // 
+            // btnTolakPeminjaman
+            // 
+            this.btnTolakPeminjaman.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTolakPeminjaman.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(53)))), ((int)(((byte)(79)))));
+            this.btnTolakPeminjaman.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(53)))), ((int)(((byte)(79)))));
+            this.btnTolakPeminjaman.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTolakPeminjaman.BorderRadius = 0;
+            this.btnTolakPeminjaman.BorderSize = 0;
+            this.btnTolakPeminjaman.FlatAppearance.BorderSize = 0;
+            this.btnTolakPeminjaman.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTolakPeminjaman.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnTolakPeminjaman.ForeColor = System.Drawing.Color.White;
+            this.btnTolakPeminjaman.Location = new System.Drawing.Point(908, 284);
+            this.btnTolakPeminjaman.Name = "btnTolakPeminjaman";
+            this.btnTolakPeminjaman.Size = new System.Drawing.Size(163, 78);
+            this.btnTolakPeminjaman.TabIndex = 19;
+            this.btnTolakPeminjaman.Text = "Tolak Peminjaman";
+            this.btnTolakPeminjaman.TextColor = System.Drawing.Color.White;
+            this.btnTolakPeminjaman.UseVisualStyleBackColor = false;
+            this.btnTolakPeminjaman.Click += new System.EventHandler(this.btnTolakPeminjaman_Click);
+            // 
             // RequestPinjaman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 796);
+            this.Controls.Add(this.btnTolakPeminjaman);
             this.Controls.Add(this.dataGridViewReqPinjaman);
             this.Controls.Add(this.btnTambahBarang);
             this.Controls.Add(this.textBoxSearch);
@@ -140,5 +163,6 @@
         private DataGridView dataGridViewReqPinjaman;
         private Label labelPinjaman;
         private RJCodeAdvance.RJControls.RJButton btnTambahBarang;
+        private RJCodeAdvance.RJControls.RJButton btnTolakPeminjaman;
     }
 }
