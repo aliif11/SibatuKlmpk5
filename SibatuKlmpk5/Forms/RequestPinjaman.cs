@@ -41,7 +41,7 @@ namespace SibatuKlmpk5.Forms
 
         public void tampilkanData()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT req_peminjaman.id, users.nama, barang.nama, tanggal, waktu_mulai, waktu_akhir FROM req_peminjaman\r\nJOIN users\r\n  ON req_peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON req_peminjaman.id_barang = barang.id", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT req_peminjaman.id, users.nama, barang.nama, no_telp, tanggal, waktu_mulai, waktu_akhir FROM req_peminjaman\r\nJOIN users\r\n  ON req_peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON req_peminjaman.id_barang = barang.id", connection);
             System.Data.DataSet ds = new System.Data.DataSet();
             da.Fill(ds, "req_peminjaman");
 
@@ -64,9 +64,10 @@ namespace SibatuKlmpk5.Forms
         {
             dataGridViewReqPinjaman.Columns[1].HeaderText = "Nama Peminjam";
             dataGridViewReqPinjaman.Columns[2].HeaderText = "Nama Barang";
-            dataGridViewReqPinjaman.Columns[3].HeaderText = "Tanggal";
-            dataGridViewReqPinjaman.Columns[4].HeaderText = "Waktu Mulai";
-            dataGridViewReqPinjaman.Columns[5].HeaderText = "Waktu Akhir";
+            dataGridViewReqPinjaman.Columns[3].HeaderText = "No Telepon";
+            dataGridViewReqPinjaman.Columns[4].HeaderText = "Tanggal";
+            dataGridViewReqPinjaman.Columns[5].HeaderText = "Waktu Mulai";
+            dataGridViewReqPinjaman.Columns[6].HeaderText = "Waktu Akhir";
         }
 
         private void dataGridSize()
@@ -93,12 +94,13 @@ namespace SibatuKlmpk5.Forms
             cmd = connection.CreateCommand();
             sqlCmd = connection.CreateCommand();
 
-            command.CommandText = "INSERT INTO peminjaman(id_users,id_barang,tanggal,waktu_mulai,waktu_akhir) VALUES (@users,@barang,@tanggal,@mulai,@akhir)";
+            command.CommandText = "INSERT INTO peminjaman(id_users,id_barang,no_telp,tanggal,waktu_mulai,waktu_akhir) VALUES (@users,@barang,@noTelp,@tanggal,@mulai,@akhir)";
             command.Parameters.AddWithValue("@users", value[1]);
             command.Parameters.AddWithValue("@barang", value[2]);
-            command.Parameters.AddWithValue("@tanggal", value[3]);
-            command.Parameters.AddWithValue("@mulai", value[4]);
-            command.Parameters.AddWithValue("@akhir", value[5]);
+            command.Parameters.AddWithValue("@noTelp", value[3]);
+            command.Parameters.AddWithValue("@tanggal", value[4]);
+            command.Parameters.AddWithValue("@mulai", value[5]);
+            command.Parameters.AddWithValue("@akhir", value[6]);
 
             cmd.CommandText = "DELETE FROM req_peminjaman WHERE id = @id";
             cmd.Parameters.AddWithValue("@id", selectedId);
@@ -204,7 +206,7 @@ namespace SibatuKlmpk5.Forms
 
         private void searchData(string valueToFind)
         {
-            string query = $"SELECT req_peminjaman.id, users.nama, barang.nama, tanggal, waktu_mulai, waktu_akhir FROM req_peminjaman\r\nJOIN users\r\n  ON req_peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON req_peminjaman.id_barang = barang.id WHERE users.nama LIKE'%{valueToFind}%' OR barang.nama LIKE'%{valueToFind}%'";
+            string query = $"SELECT req_peminjaman.id, users.nama, barang.nama, no_telp, tanggal, waktu_mulai, waktu_akhir FROM req_peminjaman\r\nJOIN users\r\n  ON req_peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON req_peminjaman.id_barang = barang.id WHERE users.nama LIKE'%{valueToFind}%' OR barang.nama LIKE'%{valueToFind}%'";
             MySqlDataAdapter da = new MySqlDataAdapter(query, connection);
             System.Data.DataSet ds = new System.Data.DataSet();
             da.Fill(ds, "req_peminjaman");

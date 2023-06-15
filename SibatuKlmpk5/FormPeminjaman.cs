@@ -68,7 +68,7 @@ namespace SibatuKlmpk5
             string barang = comboBoxBarang.Texts;
             string waktu_mulai = textBoxWaktuMulai.Texts;
             string waktu_akhir = textBoxWaktuAkhir.Texts;
-            string query = "INSERT INTO req_peminjaman(id_users,id_barang,tanggal,waktu_mulai,waktu_akhir) VALUES (@users,@barang,@tanggal,@mulai,@akhir)";
+            string query = "INSERT INTO req_peminjaman(id_users,id_barang,no_telp,tanggal,waktu_mulai,waktu_akhir) VALUES (@users,@barang,@noTelp,@tanggal,@mulai,@akhir)";
 
             if (validateReqPeminjaman(nim_nip, no_telp, barang, waktu_mulai, waktu_akhir))
                 return;
@@ -91,6 +91,7 @@ namespace SibatuKlmpk5
             cmd.CommandText = query;
             cmd.Parameters.AddWithValue("@users", idUsers);
             cmd.Parameters.AddWithValue("@barang", idBarang);
+            cmd.Parameters.AddWithValue("@noTelp", no_telp);
             cmd.Parameters.AddWithValue("@tanggal", tanggal);
             cmd.Parameters.AddWithValue("@mulai", waktu_mulai);
             cmd.Parameters.AddWithValue("@akhir", waktu_akhir);

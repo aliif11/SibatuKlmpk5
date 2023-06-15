@@ -39,7 +39,7 @@ namespace SibatuKlmpk5.Forms
 
         public void tampilkanData()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT peminjaman.id, users.nama, barang.nama, tanggal, waktu_mulai, waktu_akhir FROM peminjaman\r\nJOIN users\r\n  ON peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON peminjaman.id_barang = barang.id", connection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT peminjaman.id, users.nama, barang.nama, no_telp ,tanggal, waktu_mulai, waktu_akhir FROM peminjaman\r\nJOIN users\r\n  ON peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON peminjaman.id_barang = barang.id", connection);
             System.Data.DataSet ds = new System.Data.DataSet();
             da.Fill(ds, "peminjaman");
 
@@ -62,9 +62,10 @@ namespace SibatuKlmpk5.Forms
         {
             dataGridViewPinjaman.Columns[1].HeaderText = "Nama Peminjam";
             dataGridViewPinjaman.Columns[2].HeaderText = "Nama Barang";
-            dataGridViewPinjaman.Columns[3].HeaderText = "Tanggal";
-            dataGridViewPinjaman.Columns[4].HeaderText = "Waktu Mulai";
-            dataGridViewPinjaman.Columns[5].HeaderText = "Waktu Akhir";
+            dataGridViewPinjaman.Columns[3].HeaderText = "No Telepon";
+            dataGridViewPinjaman.Columns[4].HeaderText = "Tanggal";
+            dataGridViewPinjaman.Columns[5].HeaderText = "Waktu Mulai";
+            dataGridViewPinjaman.Columns[6].HeaderText = "Waktu Akhir";
         }
 
         private void dataGridSize()
@@ -84,7 +85,7 @@ namespace SibatuKlmpk5.Forms
 
         private void searchData(string valueToFind)
         {
-            string query = $"SELECT peminjaman.id, users.nama, barang.nama, tanggal, waktu_mulai, waktu_akhir FROM peminjaman\r\nJOIN users\r\n  ON peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON peminjaman.id_barang = barang.id WHERE users.nama LIKE'%{valueToFind}%' OR barang.nama LIKE'%{valueToFind}%'";
+            string query = $"SELECT peminjaman.id, users.nama, barang.nama, no_telp, tanggal, waktu_mulai, waktu_akhir FROM peminjaman\r\nJOIN users\r\n  ON peminjaman.id_users = users.id\r\nJOIN barang\r\n  ON peminjaman.id_barang = barang.id WHERE users.nama LIKE'%{valueToFind}%' OR barang.nama LIKE'%{valueToFind}%'";
             MySqlDataAdapter da = new MySqlDataAdapter(query, connection);
             System.Data.DataSet ds = new System.Data.DataSet();
             da.Fill(ds, "peminjaman");
